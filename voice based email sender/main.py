@@ -25,10 +25,10 @@ def SpeakText(command, langinp=LANGUAGE):
     """
     if langinp == "": langinp = "en"
     tts = gTTS(text=command, lang=langinp)
-    tts.save("~speak1.mp3")
-    playsound("~speak1.mp3")
+    tts.save("~speak.mp3")
+    playsound("~speak.mp3")
     print(command)
-    os.remove("~speak1.mp3")
+    os.remove("~speak.mp3")
 
 
 def speech_to_text():
