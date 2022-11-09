@@ -24,11 +24,11 @@ def SpeakText(command, langinp=LANGUAGE):
         langinp (str, optional): Output language. Defaults to "en".
     """
     if langinp == "": langinp = "en"
-    tts = gTTS(text=command, lang=langinp)
-    tts.save("~speak.mp3")
-    playsound("~speak.mp3")
+    tts = gTTS(text=command, lang=langinp,slow=False)
+    tts.save('~hello.mp3')
+    playsound('~hello.mp3')
     print(command)
-    os.remove("~speak.mp3")
+    os.remove('~hello.mp3')
 
 
 def speech_to_text():
